@@ -14,7 +14,7 @@ export const generateMetadata = ({ params }) => {
 };
 
 function PostCard(post) {
-//   console.log(post);
+  //   console.log(post);
   return (
     <div className="mb-8">
       <h2 className="mb-1 text-xl">

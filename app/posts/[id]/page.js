@@ -67,7 +67,7 @@ export default async function Page({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <article className="mx-auto max-w-xl py-8 prose prose-slate">
+      <article className="mx-auto max-w-xl py-8 prose prose-slate dark:prose-invert">
         <div className="mb-8 text-center">
           <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
             {dayjs(post.date).format("DD/MM/YYYY")}
