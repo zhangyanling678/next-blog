@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# .contentlayer 存放的正是 md、mdx 编译后的文件，这些并不需要提交到远程仓库
+.contentlayer
