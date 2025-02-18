@@ -3,6 +3,12 @@ import siteMetadata from "@/data/siteMetadata";
 import "./globals.css";
 import { ThemeProviders } from "./theme-providers";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import { dir } from "i18next";
+import LangSwitch from "@/components/LangSwitch";
+
+export async function generateStaticParams() {
+  return siteMetadata.languages.map((lng) => ({ params: { lng } }));
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,15 +65,17 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params }) {
+  const { lng } = params;
   return (
-    <html lang={siteMetadata.locale} suppressHydrationWarning>
+    <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
       <ThemeProviders>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <header className="flex justify-end">
             <ThemeSwitch />
+            <LangSwitch />
           </header>
           {children}
         </body>
