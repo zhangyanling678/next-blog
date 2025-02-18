@@ -30,7 +30,7 @@ export function middleware(request) {
 
   if (filtedLanguage.length > 0) {
     if (filtedLanguage[0] === fallbackLanguage) {
-      // /zh/xxx 重定向到 `/xxx`
+      // 将 /zh/xxx 重定向到 `/xxx`
       const url = pathname.replace(`/${fallbackLanguage}`, "");
       return NextResponse.redirect(new URL(url ? url : "/", request.url));
     }

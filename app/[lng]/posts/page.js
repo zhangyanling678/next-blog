@@ -19,7 +19,6 @@ export const generateMetadata = async ({ params }) => {
 };
 
 function PostCard({ lng, ...post }) {
-  //   console.log(post);
   return (
     <div className="mb-8">
       <h2 className="mb-1 text-xl">

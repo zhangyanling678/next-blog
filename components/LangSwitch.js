@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useRef, Fragment, useEffect } from "react";
+import { useState, Fragment } from "react";
 import {
-  usePathname,
   useParams,
   useRouter,
   useSelectedLayoutSegments,

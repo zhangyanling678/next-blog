@@ -1,8 +1,8 @@
 const siteMetadata = {
   siteUrl: "https://yayujs.com",
-  title: "冴羽的技术博客",
-  description: "冴羽的技术博客，分享技术、个人成长等内容",
-  author: "冴羽",
+  title: "yanling的技术博客",
+  description: "yanling的技术博客，分享技术、个人成长等内容",
+  author: "yanling",
   languages: ["zh", "en"],
   fallbackLanguage: "zh",
   socialBanner:

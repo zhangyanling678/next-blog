@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
   });
 
   const authors = post?.authors || [siteMetadata.author];
-  //   return { title: post.title };
+  
   return {
     title: post.title,
     description: post.description,
