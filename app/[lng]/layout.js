@@ -5,6 +5,7 @@ import { ThemeProviders } from "./theme-providers";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import { dir } from "i18next";
 import LangSwitch from "@/components/LangSwitch";
+import { WebVitals } from "@/components/WebVitals.js";
 
 export async function generateStaticParams() {
   return siteMetadata.languages.map((lng) => ({ params: { lng } }));
@@ -69,17 +70,18 @@ export default function RootLayout({ children, params }) {
   const { lng } = params;
   return (
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
-      <ThemeProviders>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <WebVitals />
+        <ThemeProviders>
           <header className="flex justify-end">
             <ThemeSwitch />
             <LangSwitch />
           </header>
           {children}
-        </body>
-      </ThemeProviders>
+        </ThemeProviders>
+      </body>
     </html>
   );
 }
