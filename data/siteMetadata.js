@@ -1,12 +1,12 @@
 const siteMetadata = {
-  siteUrl: "https://yayujs.com",
-  title: "yanling的技术博客",
-  description: "yanling的技术博客，分享技术、个人成长等内容",
-  author: "yanling",
+  siteUrl: "https://example.com",
+  title: "我的的技术博客",
+  description: "我的的技术博客，分享技术、个人成长等内容",
+  author: "我的",
   languages: ["zh", "en"],
   fallbackLanguage: "zh",
   socialBanner:
-    "https://cdna.artstation.com/p/assets/images/images/028/138/058/large/z-w-gu-bandageb5f.jpg?1593594749",
+    "https://m.ccw.site/community/persionalCenterCover/group2/javier-miranda-wyl4NFElEGw-unsplash.jpg",
 };
 
 export default siteMetadata;

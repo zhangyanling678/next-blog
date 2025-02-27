@@ -66,8 +66,8 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children, params }) {
-  const { lng } = params;
+export default async function RootLayout({ children, params }) {
+  const { lng } = await params;
   return (
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
       <body
